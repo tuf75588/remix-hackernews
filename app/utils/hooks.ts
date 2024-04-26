@@ -1,4 +1,5 @@
-import { useLocation, useParams, useSearchParams } from '@remix-run/react';
+import { useLocation, useSearchParams } from '@remix-run/react';
+import { getPageNumberFromSearchParams } from './news-page-number';
 
 export function useCurrentPathname(): string {
   const loc = useLocation();
@@ -7,5 +8,5 @@ export function useCurrentPathname(): string {
 
 export function usePageNumber(): number {
   const [searchParams] = useSearchParams();
-  return 2;
+  return getPageNumberFromSearchParams(searchParams);
 }
