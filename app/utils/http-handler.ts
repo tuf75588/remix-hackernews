@@ -1,4 +1,4 @@
-export enum URLSearchFieldParam {
+export enum URLSearchParamFields  {
   HOW = 'how',
   GOTO = 'goto',
   PAGE = 'p',
