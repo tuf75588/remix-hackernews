@@ -1,31 +1,31 @@
 import {
   Links,
+  LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
 
-import './styles.css';
 
-export function Layout({ children }: { children: React.ReactNode }) {
+
+export default function App() {
   return (
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="referrer" content="origin" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
         <Meta />
         <Links />
       </head>
       <body>
-        {children}
+        <Outlet />
         <ScrollRestoration />
         <Scripts />
+        {process.env.NODE_ENV === 'development' && <LiveReload />}
       </body>
     </html>
   );
-}
-
-export default function App() {
-  return <Outlet />;
 }
