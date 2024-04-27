@@ -1,4 +1,4 @@
-import { Link } from 'remix';
+import { Link } from "@remix-run/react";
 
 interface IHeaderNavProps {
   userId?: string;
@@ -19,11 +19,11 @@ export function HeaderLinks(props: IHeaderNavProps): JSX.Element {
       {userId && (
         <>
           <Link to="/newswelcome">welcome</Link>
-          {' | '}
+          {" | "}
         </>
       )}
       <Link
-        className={currentUrl === '/newest' ? 'topsel' : ''}
+        className={currentUrl === "/newest" ? "topsel" : ""}
         prefetch="intent"
         to="/newest"
       >
@@ -31,9 +31,9 @@ export function HeaderLinks(props: IHeaderNavProps): JSX.Element {
       </Link>
       {userId && (
         <>
-          {' | '}
+          {" | "}
           <Link
-            className={currentUrl === '/threads' ? 'topsel' : ''}
+            className={currentUrl === "/threads" ? "topsel" : ""}
             prefetch="intent"
             to={`/threads?id=${userId}`}
           >
@@ -41,45 +41,45 @@ export function HeaderLinks(props: IHeaderNavProps): JSX.Element {
           </Link>
         </>
       )}
-      {' | '}
+      {" | "}
       <Link
-        className={currentUrl === '/newcomments' ? 'topsel' : ''}
+        className={currentUrl === "/newcomments" ? "topsel" : ""}
         prefetch="intent"
         to="/newcomments"
       >
         comments
       </Link>
-      {' | '}
+      {" | "}
       <Link
-        className={currentUrl === '/show' ? 'topsel' : ''}
+        className={currentUrl === "/show" ? "topsel" : ""}
         prefetch="intent"
         to="/show"
       >
         show
       </Link>
-      {' | '}
+      {" | "}
       <Link
-        className={currentUrl === '/ask' ? 'topsel' : ''}
+        className={currentUrl === "/ask" ? "topsel" : ""}
         prefetch="intent"
         to="/ask"
       >
         ask
       </Link>
-      {' | '}
+      {" | "}
       <Link
-        className={currentUrl === '/jobs' ? 'topsel' : ''}
+        className={currentUrl === "/jobs" ? "topsel" : ""}
         prefetch="intent"
         to="/jobs"
       >
         jobs
       </Link>
-      {' | '}
-      <Link className={currentUrl === '/submit' ? 'topsel' : ''} to="/submit">
+      {" | "}
+      <Link className={currentUrl === "/submit" ? "topsel" : ""} to="/submit">
         submit
       </Link>
-      {currentUrl === '/best' && (
+      {currentUrl === "/best" && (
         <>
-          {' | '}
+          {" | "}
           <Link className="topsel" prefetch="intent" to="/best">
             best
           </Link>

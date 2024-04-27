@@ -1,22 +1,16 @@
-import type { MetaFunction } from '@remix-run/node';
+import type { MetaFunction } from "@remix-run/node";
+import { Outlet } from "@remix-run/react";
+import { MeContext } from "~/utils/context";
+import { getSession, SessionCookieProperties } from "../cookies";
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: 'New Remix App' },
-    { name: 'description', content: 'Welcome to Remix!' },
-  ];
-};
+export interface IMainLoader {
+  me: { id: string; karma: number } | undefined;
+}
 
 export default function Index() {
   return (
-    <div
-      style={{
-        fontFamily: 'system-ui, sans-serif',
-        lineHeight: '1.8',
-        textAlign: 'center',
-      }}
-    >
-      hacker news client written in Remix/React
+    <div>
+      <Outlet />
     </div>
   );
 }
