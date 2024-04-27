@@ -1,6 +1,8 @@
 import { Link } from '@remix-run/react';
 import sGif from '../../public/static/s.gif';
-export default function footer(): JSX.Element {
+
+
+export function footer(): JSX.Element {
     return (
         <tr>
             <td style={{ padding: '0px' }}>
