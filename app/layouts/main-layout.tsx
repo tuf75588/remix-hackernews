@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Header } from '~/components/header';
-
+import Footer from '~/components/footer';
 interface IMainLayoutProps {
-    children: React.ReactChild;
+    children: React.ReactNode;
     isNavVisible?: boolean;
     isUserVisible?: boolean;
     isFooterVisible?: boolean;
@@ -28,7 +28,7 @@ export function MainLayout(props: IMainLayoutProps) {
                     <Header isNavVisible={!!isNavVisible} title={title!} />
                     <tr style={{ height: '10px' }}>
                         {children}
-                        {isFooterVisible && <footer>footer</footer>}
+                        {isFooterVisible && <Footer />}
                     </tr>
                 </tbody>
             </table>
