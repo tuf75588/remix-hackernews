@@ -16,7 +16,7 @@ export default function Index() {
         textAlign: 'center',
       }}
     >
-      one
+      hacker news client written in Remix/React
     </div>
   );
 }
