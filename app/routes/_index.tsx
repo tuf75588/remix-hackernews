@@ -1,16 +1,15 @@
-import type { MetaFunction } from "@remix-run/node";
-import { Outlet } from "@remix-run/react";
-import { MeContext } from "~/utils/context";
-import { getSession, SessionCookieProperties } from "../cookies";
+import {
+  useLoaderData,
+  type ClientLoaderFunctionArgs,
+  type ClientActionFunctionArgs,
+} from '@remix-run/react';
 
-export interface IMainLoader {
-  me: { id: string; karma: number } | undefined;
-}
+import { MainLayout } from '~/layouts/main-layout';
 
-export default function Index() {
+export default function IndexPage(): JSX.Element {
   return (
-    <div>
-      <Outlet />
-    </div>
+    <MainLayout>
+      <p>{''}</p>
+    </MainLayout>
   );
 }
